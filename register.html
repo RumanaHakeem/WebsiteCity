@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link href="css/lab2.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+<div class='bodypart'>
+        <div class="">
+            <h1> Welcome To Windsor! The City of Beauty </h1>
+        </div>
+        <div class="list">
+            <ul>
+                <li>
+                    <a href='index.html'> Home  </a>
+                </li>
+                <li>
+                    <a href='about.html'> About </a>
+                </li>
+                <li>
+                    <a href='photogallery.html'> Photo Gallery </a>
+                </li>
+                <li>
+                    <a href='myaccount.html'> My Account </a>
+                </li>
+                <li>
+                    <a href='register.html'> Register </a> </li>
+            </ul>
+        </div>
+        <div class="content-holder">
+            <div class='images'>
+                <div class='images-header'>
+                    <h2> Registration </h2>
+                </div>
+                <div class='main_signup'>
+                    <span>*By Registering, you will recieve the updates about upcoming events in City of Windsor</span>
+                    <br/><br/>
+
+                    <form name="Sign Up" action="#">
+                        <label>First Name: </label><input type="text" name="text1" id="txtFName"/>
+                        <br>
+                        <label>Last Name: </label><input typy="password" name="text2" id="txtLName"/>
+                        <br>
+                        <label>Email: </label><input typy="password" name="text2" id="txtEmail"/>
+                        <br>
+                        <input type="radio" name="gender" value="male"/>Male
+                        <br/>
+                        <input type="radio" name="gender" value="female"/>Female
+                        <br/>
+
+                        <input type="button" onclick="javascript:submit_form()" name="btnSubmit" value="Submit" /><span id="success_msg"></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function submit_form() {
+        if(document.getElementById('txtFName').value == '') {
+            alert('First Name Required');
+            return false;
+        }
+        else if(document.getElementById('txtLName').value == '') {
+            alert('Last Name Required');
+            return false;
+        }
+        else if(document.getElementById('txtEmail').value == '') {
+            alert('Email Required');
+            return false;
+        }
+        else {
+            document.getElementById('success_msg').innerText = 'Registration Successful!';
+        }
+    };
+</script>
+</html>
